@@ -13,14 +13,31 @@ struct SignInInputView: View {
     
     var body: some View {
         VStack(spacing: 15) {
-            IconTextField(iconName: "envelope", text: $email, placeholder: "Email")
+            IconTextField(iconName: "envelope", text: $email, placeholder: "Email" )
+                .onChange(
+                    of: email,
+                    perform: { newValue in
+                        email = newValue
+                    })
+            
+            
             IconTextField(iconName: "lock", text: $password, placeholder: "Password")
+                .onChange(
+                    of: password,
+                    perform: { newValue in
+                        password = newValue
+                    })
             
         }
     }
 }
 
 #Preview {
-    SignInInputView(email: .constant("Email"), password: .constant("Password"))
-        .padding()
+    SignInInputView(
+        email: .constant(""),
+        password: .constant("")
+        //        isEmailValid: true,
+        //        isPasswordValid: false
+    )
+    .padding()
 }

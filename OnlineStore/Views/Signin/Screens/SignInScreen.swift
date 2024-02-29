@@ -11,6 +11,10 @@ struct SignInScreen: View {
     @State private var email: String = ""
     @State private var password: String = ""
     
+    @State private var showError: Bool = false
+    @State private var errorMessage: String = ""
+    @State private var shouldNavigateToHome: Bool = false
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -19,48 +23,47 @@ struct SignInScreen: View {
                     subTitle: "Sign in to continue"
                 )
                 
-                SignInInputView(email: $email, password: $password)
+                SignInInputView(
+                    email: $email,
+                    password: $password
+                )
                 
-                PrimaryButton(title: "Sign In") { signIn() }
-                    .padding([.top, .bottom], 20)
+                PrimaryButton(title: "Sign In") {
+                    signIn()
+                }
+                .padding([.top, .bottom], 20)
                 
                 LoginFooterView()
             }
             .padding()
-        }
-    }
-    
-    func signIn() {}
-    
-}
-
-
-struct LoginFooterView: View {
-    var body: some View {
-        VStack{
-            Divider()
-                .padding(.vertical, 20)
-            
-            Text("OR")
-                .foregroundColor(.secondary)
-            
-            Text("Forgot Password?")
-                .foregroundColor(.blue)
-                .padding(.vertical, 5)
-            
-            
-            HStack {
-                Text("Don't have an account?")
-                NavigationLink(destination: SignUpScreen()) {
-                    Text("Register")
-                        .foregroundColor(.blue)
-                }
-                
+            .alert(isPresented: $showError) {
+                Alert(title: Text(email), message: Text(errorMessage), dismissButton: .default(Text("OK")))
             }
+            .background(
+                NavigationLink(
+                    destination: shouldNavigateToHome ? HomeScreen() : nil,
+                    isActive: $shouldNavigateToHome,
+                    label: { EmptyView() }
+                )
+            )
         }
     }
+    
+    
+    func signIn() {
+        if validateCredentials() {
+            shouldNavigateToHome = true
+        } else {
+            showError = true
+            errorMessage = "Please enter a valid email and password."
+        }
+    }
+    
+    private func validateCredentials() -> Bool {
+        return !email.isEmpty && !password.isEmpty
+    }
+    
 }
-
 
 
 #Preview {
