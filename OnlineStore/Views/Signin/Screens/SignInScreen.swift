@@ -12,32 +12,33 @@ struct SignInScreen: View {
     @State private var password: String = ""
     
     var body: some View {
-        VStack {
-            AuthHeaderView(
-                title: "Welcome to Online Store",
-                subTitle: "Sign in to continue"
-            )
-            
-            SignInInputView(email: $email, password: $password)
+        NavigationStack {
+            VStack {
+                AuthHeaderView(
+                    title: "Welcome to Online Store",
+                    subTitle: "Sign in to continue"
+                )
+                
+                SignInInputView(email: $email, password: $password)
+                    .padding(.top, 20)
+                
+                Button(action: {
+                    signIn()
+                }) {
+                    Text("Sign In")
+                        .foregroundColor(.white)
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.blue)
+                        .cornerRadius(4)
+                }
                 .padding(.top, 20)
-            
-            Button(action: {
-                signIn()
-            }) {
-                Text("Sign In")
-                    .foregroundColor(.white)
-                    .font(.headline)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.blue)
-                    .cornerRadius(4)
+                
+                LoginFooterView()
             }
-            .padding(.top, 20)
-            
-            LoginFooterView()
-            
+            .padding()
         }
-        .padding()
     }
     
     func signIn() {}
@@ -58,8 +59,10 @@ struct LoginFooterView: View {
                 .foregroundColor(.blue)
                 .padding(.vertical, 5)
             
-            Text("Don’t have an account? Register")
-                .foregroundColor(.blue)
+            NavigationLink(destination: SignUpScreen()) {
+                Text("Don’t have an account? Register")
+                    .foregroundColor(.blue)
+            }
         }
     }
 }
