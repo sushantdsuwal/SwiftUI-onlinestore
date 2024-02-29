@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		46A99EFC2B908D990070DB3E /* OnlineStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A99EFB2B908D990070DB3E /* OnlineStoreApp.swift */; };
-		46A99EFE2B908D990070DB3E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A99EFD2B908D990070DB3E /* ContentView.swift */; };
 		46A99F002B908D9A0070DB3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46A99EFF2B908D9A0070DB3E /* Assets.xcassets */; };
 		46A99F032B908D9A0070DB3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46A99F022B908D9A0070DB3E /* Preview Assets.xcassets */; };
 		46A99F0D2B908D9A0070DB3E /* OnlineStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A99F0C2B908D9A0070DB3E /* OnlineStoreTests.swift */; };
 		46A99F172B908D9A0070DB3E /* OnlineStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A99F162B908D9A0070DB3E /* OnlineStoreUITests.swift */; };
 		46A99F192B908D9A0070DB3E /* OnlineStoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A99F182B908D9A0070DB3E /* OnlineStoreUITestsLaunchTests.swift */; };
+		46A99F272B908F360070DB3E /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A99F262B908F360070DB3E /* SignInScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		46A99EF82B908D990070DB3E /* OnlineStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A99EFB2B908D990070DB3E /* OnlineStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineStoreApp.swift; sourceTree = "<group>"; };
-		46A99EFD2B908D990070DB3E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		46A99EFF2B908D9A0070DB3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46A99F022B908D9A0070DB3E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		46A99F082B908D9A0070DB3E /* OnlineStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnlineStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +43,7 @@
 		46A99F122B908D9A0070DB3E /* OnlineStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnlineStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A99F162B908D9A0070DB3E /* OnlineStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineStoreUITests.swift; sourceTree = "<group>"; };
 		46A99F182B908D9A0070DB3E /* OnlineStoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineStoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		46A99F262B908F360070DB3E /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +94,8 @@
 		46A99EFA2B908D990070DB3E /* OnlineStore */ = {
 			isa = PBXGroup;
 			children = (
+				46A99F252B908E270070DB3E /* Screens */,
 				46A99EFB2B908D990070DB3E /* OnlineStoreApp.swift */,
-				46A99EFD2B908D990070DB3E /* ContentView.swift */,
 				46A99EFF2B908D9A0070DB3E /* Assets.xcassets */,
 				46A99F012B908D9A0070DB3E /* Preview Content */,
 			);
@@ -125,6 +125,14 @@
 				46A99F182B908D9A0070DB3E /* OnlineStoreUITestsLaunchTests.swift */,
 			);
 			path = OnlineStoreUITests;
+			sourceTree = "<group>";
+		};
+		46A99F252B908E270070DB3E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				46A99F262B908F360070DB3E /* SignInScreen.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46A99EFE2B908D990070DB3E /* ContentView.swift in Sources */,
 				46A99EFC2B908D990070DB3E /* OnlineStoreApp.swift in Sources */,
+				46A99F272B908F360070DB3E /* SignInScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
