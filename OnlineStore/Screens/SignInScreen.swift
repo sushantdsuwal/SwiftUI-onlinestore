@@ -32,26 +32,38 @@ struct SignInInputView: View {
     
     var body: some View {
         VStack(spacing: 15) {
-            HStack {
-                Image(systemName: "envelope")
-                    .frame(width: 20, height: 20)
-                    .padding(.leading, 10)
-                
-                TextField("Email", text: $email)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.horizontal, 10)
-                    .autocapitalization(.none)
+            ZStack(alignment: .leading) {
+                HStack {
+                    Image(systemName: "envelope")
+                        .frame(width: 20)
+                    TextField("Email", text: $email)
+                        .padding(.horizontal, 10)
+                        .autocapitalization(.none)
+                        .foregroundColor(.primary)
+                }
             }
+            .padding(10)
+            .overlay(
+                RoundedRectangle(cornerRadius: 4)
+                    .stroke(Color.black, lineWidth: 1)
+            )
             
-            HStack {
-                Image(systemName: "lock")
-                    .frame(width: 20, height: 20)
-                    .padding(.leading, 10)
-                
-                SecureField("Password", text: $password)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.horizontal, 10)
+            ZStack(alignment: .leading) {
+                HStack {
+                    Image(systemName: "lock")
+                        .frame(width: 20)
+                    
+                    SecureField("Password", text: $password)
+                        .padding(.horizontal, 10)
+                        .foregroundColor(.primary)
+                }
             }
+            .padding(10)
+            .overlay(
+                RoundedRectangle(cornerRadius: 4)
+                    .stroke(Color.black, lineWidth: 1)
+            )
+            
         }
     }
 }

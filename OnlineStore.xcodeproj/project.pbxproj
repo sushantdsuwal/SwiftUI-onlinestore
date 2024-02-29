@@ -71,6 +71,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		469C2B692B90E76A00E17436 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		46A99EEF2B908D990070DB3E = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +101,7 @@
 		46A99EFA2B908D990070DB3E /* OnlineStore */ = {
 			isa = PBXGroup;
 			children = (
+				469C2B692B90E76A00E17436 /* Views */,
 				46A99F252B908E270070DB3E /* Screens */,
 				46A99EFB2B908D990070DB3E /* OnlineStoreApp.swift */,
 				46A99EFF2B908D9A0070DB3E /* Assets.xcassets */,
