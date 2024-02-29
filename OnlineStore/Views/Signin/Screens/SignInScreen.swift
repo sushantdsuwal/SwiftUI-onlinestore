@@ -32,37 +32,8 @@ struct SignInInputView: View {
     
     var body: some View {
         VStack(spacing: 15) {
-            ZStack(alignment: .leading) {
-                HStack {
-                    Image(systemName: "envelope")
-                        .frame(width: 20)
-                    TextField("Email", text: $email)
-                        .padding(.horizontal, 10)
-                        .autocapitalization(.none)
-                        .foregroundColor(.primary)
-                }
-            }
-            .padding(10)
-            .overlay(
-                RoundedRectangle(cornerRadius: 4)
-                    .stroke(Color.black, lineWidth: 1)
-            )
-            
-            ZStack(alignment: .leading) {
-                HStack {
-                    Image(systemName: "lock")
-                        .frame(width: 20)
-                    
-                    SecureField("Password", text: $password)
-                        .padding(.horizontal, 10)
-                        .foregroundColor(.primary)
-                }
-            }
-            .padding(10)
-            .overlay(
-                RoundedRectangle(cornerRadius: 4)
-                    .stroke(Color.black, lineWidth: 1)
-            )
+            IconTextField(iconName: "envelope", text: $email, placeholder: "Email")
+            IconTextField(iconName: "lock", text: $password, placeholder: "Password")
             
         }
     }
@@ -84,6 +55,7 @@ struct IntroHeaderView: View {
         }
     }
 }
+
 
 #Preview {
     SignInScreen()
