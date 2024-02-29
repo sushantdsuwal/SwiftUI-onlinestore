@@ -13,7 +13,7 @@ struct SignInScreen: View {
     
     var body: some View {
         VStack {
-            IntroHeaderView(
+            AuthHeaderView(
                 title: "Welcome to Online Store",
                 subTitle: "Sign in to continue"
             )
@@ -25,36 +25,6 @@ struct SignInScreen: View {
     }
 }
 
-
-struct SignInInputView: View {
-    @Binding var email: String
-    @Binding var password: String
-    
-    var body: some View {
-        VStack(spacing: 15) {
-            IconTextField(iconName: "envelope", text: $email, placeholder: "Email")
-            IconTextField(iconName: "lock", text: $password, placeholder: "Password")
-            
-        }
-    }
-}
-
-
-struct IntroHeaderView: View {
-    let title: String;
-    let subTitle: String;
-    
-    var body: some View {
-        VStack {
-            Image(.logo)
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text(title)
-                .padding([.bottom, .top], 5)
-            Text(subTitle).fontWeight(.light)
-        }
-    }
-}
 
 
 #Preview {

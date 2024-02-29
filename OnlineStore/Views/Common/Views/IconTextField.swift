@@ -7,12 +7,33 @@
 
 import SwiftUI
 
-struct TextInput: View {
+struct IconTextField: View {
+    var iconName: String
+    @Binding var text: String
+    var placeholder: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack(alignment: .leading) {
+            HStack(spacing: 10) {
+                Image(systemName: iconName)
+                    .frame(width: 20)
+                
+                TextField(placeholder, text: $text)
+                    .padding(.horizontal, 10)
+                    .autocapitalization(.none)
+                    .foregroundColor(.primary)
+            }
+        }
+        .padding(10)
+        .overlay(
+            RoundedRectangle(cornerRadius: 4)
+                .stroke(Color.black, lineWidth: 1)
+        )
     }
 }
 
+
 #Preview {
-    TextInput()
+    IconTextField(iconName: "envelope", text: .constant(""), placeholder: "Email")
+        .padding(.all)
 }

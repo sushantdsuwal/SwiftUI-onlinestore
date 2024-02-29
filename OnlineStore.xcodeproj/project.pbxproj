@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46521D0C2B90EC7300646372 /* IconTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46521D0B2B90EC7300646372 /* IconTextField.swift */; };
+		46521D112B90EEC400646372 /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46521D102B90EEC400646372 /* AuthHeaderView.swift */; };
+		46521D142B90EF1D00646372 /* SignInInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46521D132B90EF1D00646372 /* SignInInputView.swift */; };
 		46A99EFC2B908D990070DB3E /* OnlineStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A99EFB2B908D990070DB3E /* OnlineStoreApp.swift */; };
 		46A99F002B908D9A0070DB3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46A99EFF2B908D9A0070DB3E /* Assets.xcassets */; };
 		46A99F032B908D9A0070DB3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46A99F022B908D9A0070DB3E /* Preview Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		46521D0B2B90EC7300646372 /* IconTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTextField.swift; sourceTree = "<group>"; };
+		46521D102B90EEC400646372 /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
+		46521D132B90EF1D00646372 /* SignInInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInputView.swift; sourceTree = "<group>"; };
 		46A99EF82B908D990070DB3E /* OnlineStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A99EFB2B908D990070DB3E /* OnlineStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineStoreApp.swift; sourceTree = "<group>"; };
 		46A99EFF2B908D9A0070DB3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,9 +77,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46521D092B90EC4300646372 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				46521D0F2B90EE9A00646372 /* Screens */,
+				46521D0A2B90EC5600646372 /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		46521D0A2B90EC5600646372 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				46521D0B2B90EC7300646372 /* IconTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		46521D0E2B90EE2B00646372 /* Signin */ = {
+			isa = PBXGroup;
+			children = (
+				46521D122B90EF0100646372 /* Views */,
+				46A99F252B908E270070DB3E /* Screens */,
+			);
+			path = Signin;
+			sourceTree = "<group>";
+		};
+		46521D0F2B90EE9A00646372 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				46521D102B90EEC400646372 /* AuthHeaderView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		46521D122B90EF0100646372 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				46521D132B90EF1D00646372 /* SignInInputView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		469C2B692B90E76A00E17436 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				46521D0E2B90EE2B00646372 /* Signin */,
+				46521D092B90EC4300646372 /* Common */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -102,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				469C2B692B90E76A00E17436 /* Views */,
-				46A99F252B908E270070DB3E /* Screens */,
 				46A99EFB2B908D990070DB3E /* OnlineStoreApp.swift */,
 				46A99EFF2B908D9A0070DB3E /* Assets.xcassets */,
 				46A99F012B908D9A0070DB3E /* Preview Content */,
@@ -274,7 +323,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				46A99EFC2B908D990070DB3E /* OnlineStoreApp.swift in Sources */,
+				46521D112B90EEC400646372 /* AuthHeaderView.swift in Sources */,
+				46521D142B90EF1D00646372 /* SignInInputView.swift in Sources */,
 				46A99F272B908F360070DB3E /* SignInScreen.swift in Sources */,
+				46521D0C2B90EC7300646372 /* IconTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
