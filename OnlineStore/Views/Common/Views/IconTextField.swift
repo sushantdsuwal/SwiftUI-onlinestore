@@ -24,7 +24,7 @@ struct IconTextField: View {
                     .foregroundColor(.primary)
             }
         }
-        .padding(10)
+        .padding(15)
         .overlay(
             RoundedRectangle(cornerRadius: 4)
                 .stroke(Color.black, lineWidth: 1)

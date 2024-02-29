@@ -20,8 +20,47 @@ struct SignInScreen: View {
             
             SignInInputView(email: $email, password: $password)
                 .padding(.top, 20)
+            
+            Button(action: {
+                signIn()
+            }) {
+                Text("Sign In")
+                    .foregroundColor(.white)
+                    .font(.headline)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue)
+                    .cornerRadius(4)
+            }
+            .padding(.top, 20)
+            
+            LoginFooterView()
+            
         }
         .padding()
+    }
+    
+    func signIn() {}
+    
+}
+
+
+struct LoginFooterView: View {
+    var body: some View {
+        VStack{
+            Divider()
+                .padding(.vertical, 20)
+            
+            Text("OR")
+                .foregroundColor(.secondary)
+            
+            Text("Forgot Password?")
+                .foregroundColor(.blue)
+                .padding(.vertical, 5)
+            
+            Text("Don’t have an account? Register")
+                .foregroundColor(.blue)
+        }
     }
 }
 
@@ -30,3 +69,4 @@ struct SignInScreen: View {
 #Preview {
     SignInScreen()
 }
+
