@@ -14,6 +14,8 @@ struct SignUpScreen: View {
     @State private var password: String = ""
     @State private var verifyPassword: String = ""
     
+    @Environment(\.presentationMode) var presentationMode
+    
     
     var body: some View {
         NavigationStack {
@@ -29,28 +31,23 @@ struct SignUpScreen: View {
                     verifyPassword:$verifyPassword
                 )
                 
-                Button(action: {
-                    signup()
-                }) {
-                    Text("Sign Up")
-                        .foregroundColor(.white)
-                        .font(.headline)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blue)
-                        .cornerRadius(4)
-                }
-                .padding(.top, 20)
+                PrimaryButton(title: "Sign Up") { signup() }
+                    .padding([.top, .bottom], 20)
                 
                 HStack {
-                    Text("Have an account? ")
-                    Text("Sign In")
-                        .foregroundColor(.blue)
-                    
+                    Text("Have an account?")
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Text("Sign In")
+                            .foregroundColor(.blue)
+                    }
                 }
+                
             }
             .padding()
         }
+        .navigationBarBackButtonHidden(true)
     }
     
     func signup() {}

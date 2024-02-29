@@ -20,20 +20,9 @@ struct SignInScreen: View {
                 )
                 
                 SignInInputView(email: $email, password: $password)
-                    .padding(.top, 20)
                 
-                Button(action: {
-                    signIn()
-                }) {
-                    Text("Sign In")
-                        .foregroundColor(.white)
-                        .font(.headline)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blue)
-                        .cornerRadius(4)
-                }
-                .padding(.top, 20)
+                PrimaryButton(title: "Sign In") { signIn() }
+                    .padding([.top, .bottom], 20)
                 
                 LoginFooterView()
             }
@@ -59,9 +48,14 @@ struct LoginFooterView: View {
                 .foregroundColor(.blue)
                 .padding(.vertical, 5)
             
-            NavigationLink(destination: SignUpScreen()) {
-                Text("Don’t have an account? Register")
-                    .foregroundColor(.blue)
+            
+            HStack {
+                Text("Don't have an account?")
+                NavigationLink(destination: SignUpScreen()) {
+                    Text("Register")
+                        .foregroundColor(.blue)
+                }
+                
             }
         }
     }
