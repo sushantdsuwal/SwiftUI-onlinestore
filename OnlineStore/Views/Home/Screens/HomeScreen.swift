@@ -7,13 +7,6 @@
 
 import SwiftUI
 
-
-struct Category:Identifiable {
-    let name: String
-    let id: Int
-    let iconName: String
-}
-
 struct HomeScreen: View {
     @State private var searchProductText: String = ""
     
