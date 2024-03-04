@@ -8,10 +8,20 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    @State private var searchProductText: String = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        SearchHeader(searchProductText: $searchProductText)
+            .padding([.leading, .trailing,.bottom], 20)
+        Divider()
+        
+        
+        
+        Spacer()
     }
 }
+
+
 
 #Preview {
     HomeScreen()

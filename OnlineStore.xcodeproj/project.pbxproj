@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		463E24C92B96358A009D01FE /* SearchHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463E24C82B96358A009D01FE /* SearchHeader.swift */; };
 		46521D0C2B90EC7300646372 /* IconTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46521D0B2B90EC7300646372 /* IconTextField.swift */; };
 		46521D112B90EEC400646372 /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46521D102B90EEC400646372 /* AuthHeaderView.swift */; };
 		46521D142B90EF1D00646372 /* SignInInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46521D132B90EF1D00646372 /* SignInInputView.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		463E24C82B96358A009D01FE /* SearchHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeader.swift; sourceTree = "<group>"; };
 		46521D0B2B90EC7300646372 /* IconTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTextField.swift; sourceTree = "<group>"; };
 		46521D102B90EEC400646372 /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
 		46521D132B90EF1D00646372 /* SignInInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInputView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		463E24C72B963578009D01FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				463E24C82B96358A009D01FE /* SearchHeader.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		46521D092B90EC4300646372 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +177,7 @@
 		46521D1F2B90FFC900646372 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				463E24C72B963578009D01FE /* Views */,
 				46521D202B90FFCF00646372 /* Screens */,
 			);
 			path = Home;
@@ -385,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				463E24C92B96358A009D01FE /* SearchHeader.swift in Sources */,
 				46A99EFC2B908D990070DB3E /* OnlineStoreApp.swift in Sources */,
 				46521D1B2B90FA1E00646372 /* SingUpInputView.swift in Sources */,
 				46521D112B90EEC400646372 /* AuthHeaderView.swift in Sources */,
