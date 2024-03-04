@@ -26,7 +26,7 @@ struct SearchHeader: View {
             .padding(15)
             .overlay(
                 RoundedRectangle(cornerRadius: 2)
-                    .stroke(Color.purple, lineWidth: 1)
+                    .stroke(Color.gray, lineWidth: 1)
             )
             
             Image(systemName: "heart")
